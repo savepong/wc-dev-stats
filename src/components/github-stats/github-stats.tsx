@@ -8,10 +8,10 @@ import { formatAlt } from '../../utils/utils';
 })
 export class GithubStats {
   @Prop() username: string = 'savepong';
-  @Prop() theme: string = 'gotham';
-  @Prop() textColor: string = '768390FF';
-  @Prop() bgColor: string = '00000000';
-  @Prop() hideBorder: string = 'false';
+  @Prop() theme: string = '';
+  @Prop() textColor: string = '';
+  @Prop() bgColor: string = '';
+  @Prop() hideBorder: string = '';
 
   private getUrl(): string {
     return `https://github-readme-stats.vercel.app/api?username=${this.username}&show_icons=true&count_private=true&theme=${this.theme}&hide_border=${this.hideBorder}&bg_color=${this.bgColor}&text_color=${this.textColor}`;

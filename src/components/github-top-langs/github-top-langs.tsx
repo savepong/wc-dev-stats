@@ -8,11 +8,11 @@ import { formatAlt } from '../../utils/utils';
 })
 export class GithubTopLangs {
   @Prop() username: string = 'savepong';
-  @Prop() theme: string = 'gotham';
-  @Prop() textColor: string = '768390FF';
-  @Prop() bgColor: string = '00000000';
-  @Prop() hideBorder: string = 'false';
-  @Prop() layout: string = 'compact';
+  @Prop() theme: string = '';
+  @Prop() textColor: string = '';
+  @Prop() bgColor: string = '';
+  @Prop() hideBorder: string = '';
+  @Prop() layout: string = '';
   @Prop() langsCount: number = 10;
 
   private getUrl(): string {

@@ -8,10 +8,10 @@ import { formatAlt } from '../../utils/utils';
 })
 export class GithubStreakStats {
   @Prop() username: string = 'savepong';
-  @Prop() theme: string = 'gotham';
-  @Prop() textColor: string = '768390FF';
-  @Prop() bgColor: string = '00000000';
-  @Prop() hideBorder: string = 'false';
+  @Prop() theme: string = '';
+  @Prop() textColor: string = '';
+  @Prop() bgColor: string = '';
+  @Prop() hideBorder: string = '';
 
   private getUrl(): string {
     return `https://github-readme-streak-stats.herokuapp.com?user=${this.username}&theme=${this.theme}&hide_border=${this.hideBorder}&background=${this.bgColor}&dates=${this.textColor}`;

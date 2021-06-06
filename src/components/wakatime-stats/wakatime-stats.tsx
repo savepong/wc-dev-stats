@@ -8,11 +8,11 @@ import { formatAlt } from '../../utils/utils';
 })
 export class WakatimeStats {
   @Prop() username: string = 'savepong';
-  @Prop() theme: string = 'gotham';
-  @Prop() textColor: string = '768390FF';
-  @Prop() bgColor: string = '00000000';
-  @Prop() hideBorder: string = 'false';
-  @Prop() layout: string = 'default';
+  @Prop() theme: string = '';
+  @Prop() textColor: string = '';
+  @Prop() bgColor: string = '';
+  @Prop() hideBorder: string = '';
+  @Prop() layout: string = '';
 
   private getUrl(): string {
     return `https://github-readme-stats.vercel.app/api/wakatime?username=@${this.username}&layout=${this.layout}&theme=${this.theme}&hide_border=${this.hideBorder}&bg_color=${this.bgColor}&text_color=${this.textColor}`;

@@ -21,7 +21,7 @@ export class WakatimeStats {
   render() {
     return (
       <Host>
-        <img src={this.getUrl()} alt={formatAlt('Github Wakatime Stats', this.username)} width="100%" height="100%" />
+        <img src={this.getUrl()} alt={formatAlt('Wakatime Stats', this.username)} width="100%" height="100%" />
       </Host>
     );
   }

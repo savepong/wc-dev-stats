@@ -3,7 +3,7 @@ export function format(first: string, middle: string, last: string): string {
 }
 
 export function formatAlt(text: string, username?: string): string {
-  return username ? `${capitalize(username)}' ${text}` : text;
+  return username ? `${capitalize(username)}'s ${text}` : text;
 }
 
 function capitalize(str) {

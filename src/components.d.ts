@@ -13,6 +13,13 @@ export namespace Components {
         "theme": string;
         "username": string;
     }
+    interface GithubStreakStats {
+        "bgColor": string;
+        "hideBorder": string;
+        "textColor": string;
+        "theme": string;
+        "username": string;
+    }
     interface MyComponent {
         /**
           * The first name
@@ -35,6 +42,12 @@ declare global {
         prototype: HTMLGithubStatsElement;
         new (): HTMLGithubStatsElement;
     };
+    interface HTMLGithubStreakStatsElement extends Components.GithubStreakStats, HTMLStencilElement {
+    }
+    var HTMLGithubStreakStatsElement: {
+        prototype: HTMLGithubStreakStatsElement;
+        new (): HTMLGithubStreakStatsElement;
+    };
     interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
     }
     var HTMLMyComponentElement: {
@@ -43,11 +56,19 @@ declare global {
     };
     interface HTMLElementTagNameMap {
         "github-stats": HTMLGithubStatsElement;
+        "github-streak-stats": HTMLGithubStreakStatsElement;
         "my-component": HTMLMyComponentElement;
     }
 }
 declare namespace LocalJSX {
     interface GithubStats {
+        "bgColor"?: string;
+        "hideBorder"?: string;
+        "textColor"?: string;
+        "theme"?: string;
+        "username"?: string;
+    }
+    interface GithubStreakStats {
         "bgColor"?: string;
         "hideBorder"?: string;
         "textColor"?: string;
@@ -70,6 +91,7 @@ declare namespace LocalJSX {
     }
     interface IntrinsicElements {
         "github-stats": GithubStats;
+        "github-streak-stats": GithubStreakStats;
         "my-component": MyComponent;
     }
 }
@@ -78,6 +100,7 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "github-stats": LocalJSX.GithubStats & JSXBase.HTMLAttributes<HTMLGithubStatsElement>;
+            "github-streak-stats": LocalJSX.GithubStreakStats & JSXBase.HTMLAttributes<HTMLGithubStreakStatsElement>;
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
         }
     }

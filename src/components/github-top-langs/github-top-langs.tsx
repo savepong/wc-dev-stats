@@ -22,7 +22,7 @@ export class GithubTopLangs {
   render() {
     return (
       <Host>
-        <img src={this.getUrl()} alt={formatAlt('Github Streak Stats', this.username)} width="100%" height="100%" />
+        <img src={this.getUrl()} alt={formatAlt('Github Top Langs', this.username)} width="100%" height="100%" />
       </Host>
     );
   }

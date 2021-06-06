@@ -43,6 +43,14 @@ export namespace Components {
          */
         "middle": string;
     }
+    interface WakatimeStats {
+        "bgColor": string;
+        "hideBorder": string;
+        "layout": string;
+        "textColor": string;
+        "theme": string;
+        "username": string;
+    }
 }
 declare global {
     interface HTMLGithubStatsElement extends Components.GithubStats, HTMLStencilElement {
@@ -69,11 +77,18 @@ declare global {
         prototype: HTMLMyComponentElement;
         new (): HTMLMyComponentElement;
     };
+    interface HTMLWakatimeStatsElement extends Components.WakatimeStats, HTMLStencilElement {
+    }
+    var HTMLWakatimeStatsElement: {
+        prototype: HTMLWakatimeStatsElement;
+        new (): HTMLWakatimeStatsElement;
+    };
     interface HTMLElementTagNameMap {
         "github-stats": HTMLGithubStatsElement;
         "github-streak-stats": HTMLGithubStreakStatsElement;
         "github-top-langs": HTMLGithubTopLangsElement;
         "my-component": HTMLMyComponentElement;
+        "wakatime-stats": HTMLWakatimeStatsElement;
     }
 }
 declare namespace LocalJSX {
@@ -114,11 +129,20 @@ declare namespace LocalJSX {
          */
         "middle"?: string;
     }
+    interface WakatimeStats {
+        "bgColor"?: string;
+        "hideBorder"?: string;
+        "layout"?: string;
+        "textColor"?: string;
+        "theme"?: string;
+        "username"?: string;
+    }
     interface IntrinsicElements {
         "github-stats": GithubStats;
         "github-streak-stats": GithubStreakStats;
         "github-top-langs": GithubTopLangs;
         "my-component": MyComponent;
+        "wakatime-stats": WakatimeStats;
     }
 }
 export { LocalJSX as JSX };
@@ -129,6 +153,7 @@ declare module "@stencil/core" {
             "github-streak-stats": LocalJSX.GithubStreakStats & JSXBase.HTMLAttributes<HTMLGithubStreakStatsElement>;
             "github-top-langs": LocalJSX.GithubTopLangs & JSXBase.HTMLAttributes<HTMLGithubTopLangsElement>;
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
+            "wakatime-stats": LocalJSX.WakatimeStats & JSXBase.HTMLAttributes<HTMLWakatimeStatsElement>;
         }
     }
 }

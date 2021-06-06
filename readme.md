@@ -9,7 +9,8 @@
 ```
 
 ![](https://github-readme-stats.vercel.app/api?username=savepong&show_icons=true&count_private=true&theme=&hide_border=&bg_color=&text_color=)
-[API Docs](src/components/github-stats/readme.md)
+
+API Document for [github-stats](src/components/github-stats/readme.md) component.
 
 ### Github Streak Stats
 
@@ -18,7 +19,8 @@
 ```
 
 ![](https://github-readme-streak-stats.herokuapp.com/?user=savepong&theme=&hide_border=&background=&dates=)
-[API Docs](src/components/github-streak-stats/readme.md)
+
+API Document for [github-streak-stats](src/components/github-streak-stats/readme.md) component.
 
 ### Github Top Languages
 
@@ -27,7 +29,8 @@
 ```
 
 ![](https://github-readme-stats.vercel.app/api/top-langs/?username=savepong&layout=compact&langs_count=10&theme=&hide_border=&bg_color=&text_color=)
-[API Docs](src/components/github-top-langs/readme.md)
+
+API Document for [github-top-langs](src/components/github-top-langs/readme.md) component.
 
 ### Wakatime Stats
 
@@ -37,7 +40,7 @@
 
 ![](https://github-readme-stats.vercel.app/api/wakatime?username=@savepong&layout=default&theme=&hide_border=&bg_color=&text_color=)
 
-[API Docs](src/components/wakatime-stats/readme.md)
+API Document for [wakatime-stats](src/components/wakatime-stats/readme.md) component.
 
 ## Using this component
 

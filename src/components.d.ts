@@ -20,6 +20,15 @@ export namespace Components {
         "theme": string;
         "username": string;
     }
+    interface GithubTopLangs {
+        "bgColor": string;
+        "hideBorder": string;
+        "langsCount": number;
+        "layout": string;
+        "textColor": string;
+        "theme": string;
+        "username": string;
+    }
     interface MyComponent {
         /**
           * The first name
@@ -48,6 +57,12 @@ declare global {
         prototype: HTMLGithubStreakStatsElement;
         new (): HTMLGithubStreakStatsElement;
     };
+    interface HTMLGithubTopLangsElement extends Components.GithubTopLangs, HTMLStencilElement {
+    }
+    var HTMLGithubTopLangsElement: {
+        prototype: HTMLGithubTopLangsElement;
+        new (): HTMLGithubTopLangsElement;
+    };
     interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
     }
     var HTMLMyComponentElement: {
@@ -57,6 +72,7 @@ declare global {
     interface HTMLElementTagNameMap {
         "github-stats": HTMLGithubStatsElement;
         "github-streak-stats": HTMLGithubStreakStatsElement;
+        "github-top-langs": HTMLGithubTopLangsElement;
         "my-component": HTMLMyComponentElement;
     }
 }
@@ -71,6 +87,15 @@ declare namespace LocalJSX {
     interface GithubStreakStats {
         "bgColor"?: string;
         "hideBorder"?: string;
+        "textColor"?: string;
+        "theme"?: string;
+        "username"?: string;
+    }
+    interface GithubTopLangs {
+        "bgColor"?: string;
+        "hideBorder"?: string;
+        "langsCount"?: number;
+        "layout"?: string;
         "textColor"?: string;
         "theme"?: string;
         "username"?: string;
@@ -92,6 +117,7 @@ declare namespace LocalJSX {
     interface IntrinsicElements {
         "github-stats": GithubStats;
         "github-streak-stats": GithubStreakStats;
+        "github-top-langs": GithubTopLangs;
         "my-component": MyComponent;
     }
 }
@@ -101,6 +127,7 @@ declare module "@stencil/core" {
         interface IntrinsicElements {
             "github-stats": LocalJSX.GithubStats & JSXBase.HTMLAttributes<HTMLGithubStatsElement>;
             "github-streak-stats": LocalJSX.GithubStreakStats & JSXBase.HTMLAttributes<HTMLGithubStreakStatsElement>;
+            "github-top-langs": LocalJSX.GithubTopLangs & JSXBase.HTMLAttributes<HTMLGithubTopLangsElement>;
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
         }
     }

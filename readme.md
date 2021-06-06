@@ -1,6 +1,6 @@
 # Dev Stats WebComponents
 
-## Example
+## Example usage
 
 ### Github Stats
 

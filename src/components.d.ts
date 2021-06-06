@@ -6,6 +6,13 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
+    interface GithubStats {
+        "bgColor": string;
+        "hideBorder": string;
+        "textColor": string;
+        "theme": string;
+        "username": string;
+    }
     interface MyComponent {
         /**
           * The first name
@@ -22,6 +29,12 @@ export namespace Components {
     }
 }
 declare global {
+    interface HTMLGithubStatsElement extends Components.GithubStats, HTMLStencilElement {
+    }
+    var HTMLGithubStatsElement: {
+        prototype: HTMLGithubStatsElement;
+        new (): HTMLGithubStatsElement;
+    };
     interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
     }
     var HTMLMyComponentElement: {
@@ -29,10 +42,18 @@ declare global {
         new (): HTMLMyComponentElement;
     };
     interface HTMLElementTagNameMap {
+        "github-stats": HTMLGithubStatsElement;
         "my-component": HTMLMyComponentElement;
     }
 }
 declare namespace LocalJSX {
+    interface GithubStats {
+        "bgColor"?: string;
+        "hideBorder"?: string;
+        "textColor"?: string;
+        "theme"?: string;
+        "username"?: string;
+    }
     interface MyComponent {
         /**
           * The first name
@@ -48,6 +69,7 @@ declare namespace LocalJSX {
         "middle"?: string;
     }
     interface IntrinsicElements {
+        "github-stats": GithubStats;
         "my-component": MyComponent;
     }
 }
@@ -55,6 +77,7 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            "github-stats": LocalJSX.GithubStats & JSXBase.HTMLAttributes<HTMLGithubStatsElement>;
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
         }
     }

@@ -1,5 +1,44 @@
 # Dev Stats WebComponents
 
+## Example
+
+### Github Stats
+
+```html
+<github-stats username="savepong"></github-stats>
+```
+
+![](https://github-readme-stats.vercel.app/api?username=savepong&show_icons=true&count_private=true&theme=&hide_border=&bg_color=&text_color=)
+[API Docs](src/components/github-stats/readme.md)
+
+### Github Streak Stats
+
+```html
+<github-streak-stats username="savepong"></github-streak-stats>
+```
+
+![](https://github-readme-streak-stats.herokuapp.com/?user=savepong&theme=&hide_border=&background=&dates=)
+[API Docs](src/components/github-streak-stats/readme.md)
+
+### Github Top Languages
+
+```html
+<github-top-langs username="savepong" layout="compact" langs-count="10"></github-top-langs>
+```
+
+![](https://github-readme-stats.vercel.app/api/top-langs/?username=savepong&layout=compact&langs_count=10&theme=&hide_border=&bg_color=&text_color=)
+[API Docs](src/components/github-top-langs/readme.md)
+
+### Wakatime Stats
+
+```html
+<wakatime-stats username="savepong" layout="default"></wakatime-stats>
+```
+
+![](https://github-readme-stats.vercel.app/api/wakatime?username=@savepong&layout=default&theme=&hide_border=&bg_color=&text_color=)
+
+[API Docs](src/components/wakatime-stats/readme.md)
+
 ## Using this component
 
 ### Script tag
@@ -18,3 +57,10 @@
 - Run `npm install wc-dev-stats --save`
 - Add an import to the npm packages `import wc-dev-stats;`
 - Then you can use the element anywhere in your template, JSX, html etc
+
+## API Docs
+
+- [github-stats](src/components/github-stats/readme.md)
+- [github-streak-stats](src/components/github-streak-stats/readme.md)
+- [github-top-langs](src/components/github-top-langs/readme.md)
+- [wakatime-stats](src/components/wakatime-stats/readme.md)

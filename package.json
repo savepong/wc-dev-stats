@@ -1,6 +1,6 @@
 {
   "name": "wc-dev-stats",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Dev Stats WebComponents",
   "main": "dist/index.cjs.js",
   "module": "dist/custom-elements/index.js",

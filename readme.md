@@ -96,3 +96,31 @@ import wc-dev-stats;
 - [github-streak-stats](src/components/github-streak-stats/readme.md)
 - [github-top-langs](src/components/github-top-langs/readme.md)
 - [wakatime-stats](src/components/wakatime-stats/readme.md)
+
+## Contributing
+
+Clone this repo to a new directory:
+
+```bash
+git clone https://github.com/savepong/wc-dev-stats.git
+cd wc-dev-stats
+```
+
+and run:
+
+```bash
+npm install
+npm start
+```
+
+To build the component for production, run:
+
+```bash
+npm run build
+```
+
+To run the unit tests for the components, run:
+
+```bash
+npm test
+```
